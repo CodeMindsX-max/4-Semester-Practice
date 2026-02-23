@@ -1,4 +1,4 @@
-from PatternMatcher import *
+#from PatternMatcher import *
 
 operators = "+-*/%"
 numbers = "0123456789"
@@ -72,7 +72,7 @@ def replace_item(n, o, lst):
         ans = replace_item(n, o, lst[1:])
         ans.insert(0, replace_item(n, o, lst[0]))
         return ans
-def translate_to_exp(eqwlst):
+"""def translate_to_exp(eqwlst):
     print('Input: "', toeqstr(eqwlst), '"')
     for pattern, response in student_rules:
         pattern = pattern.split()
@@ -89,7 +89,7 @@ def translate_to_exp(eqwlst):
         return eqwlst
     print('Output:','"', eqwlst[0], '"')
     return eqwlst[0]
-
+"""
 
 def remove_noise(txt):
     nwords = ['a', 'the', 'number', 'of', 'this', 'if', 'that',
@@ -107,7 +107,7 @@ def student():
     for engeq in engEqs:
         engeq = engeq.split()
         eqwlst = remove_noise(engeq)
-        eq1 = translate_to_exp(eqwlst)
+        eq1 = 0#translate_to_exp(eqwlst)
         eqs.append(eq1)
     eqs = [eq for eq in eqs if eq != []]
     solve_equations(eqs)
